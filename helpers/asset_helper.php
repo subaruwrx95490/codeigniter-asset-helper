@@ -476,4 +476,18 @@ if ( ! function_exists('google_analytics'))
     }
 }
 
+
+/**
+ * Load Uploads
+ * Creates the <script> tag that links all requested js file
+ */
+if ( ! function_exists('upload'))
+{
+    function upload($file)
+    {
+		$url = upload_url() . $file;
+        return $url;
+    }
+}
+
 /* End of file asset_helper.php */
